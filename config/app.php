@@ -156,6 +156,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+
+        // unisharp
+        Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+
         // laravel collective
         Collective\Html\HtmlServiceProvider::class,
 
@@ -207,6 +212,8 @@ return [
         // laravel collective
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        //unisharp
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

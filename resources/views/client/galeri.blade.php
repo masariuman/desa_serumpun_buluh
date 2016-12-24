@@ -33,13 +33,69 @@
 											<div style="margin-left: 1em; margin-right: 1em; text-align: right;">
 												<img class="CSS_LIGHTBOX_SCALED_IMAGE_IMG" src="" style="font-family: &#39;&#39;; text-align: center;"></div>
 
-												@foreach($galeri as $galeri_list)
+
+<?php $x = 0; ?>
+
+
+
+<!--start-->
+    <div style="display:none;">
+        <div id="ninja-slider">
+            <div class="slider-inner">
+                <ul>
+               		@foreach($galeri as $galeri_list)
+                    <li>
+                        <a class="ns-img" href="{{url('fotoupload/'.$galeri_list->gambar)}}"></a>
+                        <div class="caption">
+                        </div>
+                    </li>
+                    @endforeach
+                    <!-- <li>
+                        <a class="ns-img" href="img/a.jpg"></a>
+                        <div class="caption">
+                            <h3>Dummy Caption 2</h3>
+                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="ns-img" style="background-image:url(img/b.jpg);"></span>
+                        <div class="caption">
+                            <h3>Dummy Caption 3</h3>
+                            <p>Duis fringilla arcu convallis urna commodo, et tempus velit posuere.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/"><img class="ns-img" src="img/c.jpg" /></a>
+                        <div class="caption">
+                            <h3>Dummy Caption 4</h3>
+                            <p>Quisque semper dolor sed neque consequat scelerisque at sed ex. Nam gravida massa.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/d.jpg"></a>
+                        <div class="caption">
+                            <h3>Dummy Caption 5</h3>
+                            <p>Proin non dui at metus suscipit bibendum.</p>
+                        </div>
+                    </li> -->
+                </ul>
+                <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
+            </div>
+        </div>
+    </div>
+
+
+@foreach($galeri as $galeri_list)
+
+												
 												<div class="tilt pic">
-												<a target="_blank" href="{{url('fotoupload/'.$galeri_list->gambar)}}">
+												<a>
 												<span class="judul_galeri">{{$galeri_list->nama_gambar}}</span>
-												    <img src="{{url('fotoupload/'.$galeri_list->gambar)}}" alt="" style="height: 100%;" title="{{$galeri_list->nama_gambar}}">
+												    <img src="{{url('fotoupload/'.$galeri_list->gambar)}}" alt="" style="height: 100%;" title="{{$galeri_list->nama_gambar}}" onclick="lightbox({!!$x!!})">
  													</a>
 												  </div>
+
+												  <?php $x++; ?>
 												 @endforeach
 
 																
@@ -74,6 +130,14 @@
 												</div>
 
 											</div></div>
+
+
+
+    
+
+
+
+
 
 										</div>
 										

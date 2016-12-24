@@ -48,6 +48,32 @@
     <link href="{{asset('gantella/vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
     <link href="{{asset('js/sweetalert.css')}}" rel="stylesheet">
 
+
+    <!-- ninja -->
+    <link href="{{asset('ninja/ninja-slider.css')}}" rel="stylesheet" type="text/css" />
+    <script src="{{asset('ninja/ninja-slider.js')}}" type="text/javascript"></script>
+    <script>
+        function lightbox(idx) {
+            //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
+            var ninjaSldr = document.getElementById("ninja-slider");
+            ninjaSldr.parentNode.style.display = "block";
+
+            nslider.init(idx);
+
+            var fsBtn = document.getElementById("fsBtn");
+            fsBtn.click();
+        }
+
+        function fsIconClick(isFullscreen) { //fsIconClick is the default event handler of the fullscreen button
+            if (isFullscreen) {
+                var ninjaSldr = document.getElementById("ninja-slider");
+                ninjaSldr.parentNode.style.display = "none";
+            }
+        }
+    </script>
+
+
+
     
 
 	<style id="page-skin-1" type="text/css"><!--
@@ -80,6 +106,19 @@ a.kategori:hover {
 th.orgcenter{
 	text-align: center;
 }
+
+
+#ninja-slider .caption {
+    position:absolute;
+    top:auto;
+    bottom:-100px;
+}
+#ninja-slider ul {margin-bottom:100px!important;}
+#ninja-slider li {margin-bottom:100px!important;}
+#ninja-slider ul {overflow:visible!important;}
+#ninja-slider li {/*overflow:hidden;*/}
+
+
 .section,.widget{margin:0 0 0 0;padding:0 0 0 0;
 }
 strong,b{font-weight:bold;
@@ -3995,16 +4034,38 @@ Pemerintahan Umum
 		<h2 class="title"><span><a href="{{url('galeri')}}">GALERI</a></span></h2>
 		
 
+
+
+
+<!--start-->
+    <div style="display:none;">
+        <div id="ninja-slider">
+            <div class="slider-inner">
+                <ul>
+               		@foreach($galeri_template as $template_galeri)
+                    <li>
+                        <a class="ns-img" href="{{url('fotoupload/'.$template_galeri->gambar)}}"></a>
+                        <div class="caption">
+                        </div>
+                    </li>
+                    @endforeach
+                </ul>
+                <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
+            </div>
+        </div>
+    </div>
+
+
 		<div class="widget-content popular-posts">
-			
+			<?php $y = 0;  ?>
 					<div class="item-content">
 					@foreach($galeri_template as $template_galeri)
 						<div class="pic2 tilt">
-												<a target="_blank" href="{{url('fotoupload/'.$template_galeri->gambar)}}">
-												    <img src="{{url('fotoupload/'.$template_galeri->gambar)}}" alt="" style="height: 100%;" title="{{$template_galeri->nama_gambar}}">
+												<a>
+												    <img src="{{url('fotoupload/'.$template_galeri->gambar)}}" alt="" style="height: 100%;" title="{{$template_galeri->nama_gambar}}"  onclick="lightbox({!!$y!!})">
  													</a>
 												  </div>
-						
+						<?php $y++; ?>
 					@endforeach
 					
 					</div>

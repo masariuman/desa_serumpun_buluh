@@ -86,6 +86,11 @@
 											</span>
 											
 											
+
+
+
+
+
 										</div>
 										<div class="post-header">
 											<div class="post-header-line-1"></div>
@@ -94,7 +99,7 @@
 											<div class="separator" style="clear: both; text-align: center;">
 											</div>
 											<div style="margin-left: 1em; margin-right: 1em; text-align: center;"><a href="{{url('fotoupload/'.$kategori->gambar)}}" target="_blank" title="{{$kategori->nama_gambar}}">
-												<img class="CSS_LIGHTBOX_SCALED_IMAGE_IMG" src="{{ asset('fotoupload/'.$kategori->gambar)}}" style="font-family: &#39;&#39;; text-align: center;">
+												<img class="CSS_LIGHTBOX_SCALED_IMAGE_IMG" src="{{ asset('fotoupload/'.$kategori->gambar)}}" style="font-family: &#39;&#39;; text-align: center;" onclick="lightbox()">
 												<span><b><font size="2px;">(Gambar : {{$kategori->nama_gambar}})</font></b></span></a>
 												</div>
 												
