@@ -45,12 +45,6 @@
 @endif
 <br>
 
-{!! Form::label('telepon', 'Telepon :', ['class' => 'control-label']) !!}
-{!! Form::text('telepon', null, ['class' => 'form-control']) !!}
-@if($errors->has('telepon'))
-  <span><i><b><font color="red">{{$errors->first('telepon')}}</font></b></i></span><br>
-@endif
-<br>
 
 {!! Form::label('email', 'Email :', ['class' => 'control-label']) !!}
 {!! Form::text('email', null, ['class' => 'form-control']) !!}
