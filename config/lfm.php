@@ -26,7 +26,7 @@ return [
     // NOTE: make sure to use an unique field.
     'user_field'            => 'id',
 
-    'shared_folder_name'    => '',
+    'shared_folder_name'    => '/',
     'thumb_folder_name'     => 'kecil',
 
     'images_dir'            => 'public/photos/',
