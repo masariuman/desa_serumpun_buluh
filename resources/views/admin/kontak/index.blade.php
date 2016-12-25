@@ -83,13 +83,7 @@
                           </td>
                           <td >
                             :
-                          </td>
-                          <td>
-                          @foreach($kontak as $kontak_list)
-                            {{ $kontak_list->telepon }}
-                          @endforeach
-                          </td>
-                          
+                          </td>                          
                         </tr>
                           <tr>
                           <td>
