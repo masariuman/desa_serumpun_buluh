@@ -86,18 +86,7 @@
                         </tr>
                           
                         
-                        <tr>
-                          <td style="border-left: 0px;border-right: 0px;">
-                            Kontak Person
-                          </td>
-                          <td style="border-left: 0px;border-right: 0px;">
-                            :
-                          </td>
-                          <td style="border-left: 0px;border-right: 0px;">
-                                                      {{$kontak_list->telepon}}
-                                                    </td>
-                          
-                        </tr>
+                        
                           <tr>
                           <td style="border-left: 0px;border-right: 0px;">
                             Email
