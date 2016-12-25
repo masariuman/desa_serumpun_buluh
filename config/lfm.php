@@ -27,7 +27,7 @@ return [
     'user_field'            => 'id',
 
     'shared_folder_name'    => '',
-    'thumb_folder_name'     => 'thumbs',
+    'thumb_folder_name'     => 'kecil',
 
     'images_dir'            => 'public/photos/',
     'images_url'            => '/photos/',
