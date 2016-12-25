@@ -36,7 +36,6 @@ class KontakController extends Controller
             'gambar' => 'image|max:1000|mimes:jpeg,jpg,bmp,png',
             'nama' => 'required',
             'alamat' => 'required',
-            'telepon' => 'required|numeric',
             'email' => 'required|email',
         ]);
 
