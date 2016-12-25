@@ -77,14 +77,6 @@
                         </tr>
                           
                         </tr>
-                        <tr>
-                          <td>
-                            <a>Kontak Person</a>
-                          </td>
-                          <td >
-                            :
-                          </td>                          
-                        </tr>
                           <tr>
                           <td>
                             <a>Email</a>
