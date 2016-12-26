@@ -55,8 +55,27 @@
 													
 												</div>
 												@foreach($kontak as $desa_list)
-													<div style="margin-left: 1em; margin-right: 1em; text-align: center;"><a href="{{url('fotoupload/'.$desa_list->gambar)}}" target="_blank" title="Kantor Desa">
-												<img class="CSS_LIGHTBOX_SCALED_IMAGE_IMG" src="{{ asset('fotoupload/'.$desa_list->gambar)}}" style="font-family: &#39;&#39;; text-align: center;"></a>
+
+
+<!--start-->
+    <div style="display:none;">
+        <div id="ninja-slider2">
+            <div class="slider-inner2">
+                <ul>
+                    <li>
+                        <a class="ns-img2" href="{{url('fotoupload/'.$desa_list->gambar)}}"></a>
+                        <div class="caption2">
+                        </div>
+                    </li>
+                </ul>
+                <div id="fsBtn2" class="fs-icon2" title="Expand/Close"></div>
+            </div>
+        </div>
+    </div>
+
+
+													<div style="margin-left: 1em; margin-right: 1em; text-align: center;"><a>
+												<img class="CSS_LIGHTBOX_SCALED_IMAGE_IMG" src="{{ asset('fotoupload/'.$desa_list->gambar)}}" style="font-family: &#39;&#39;; text-align: center;" onclick="lightbox2(0)"></a>
 												</div>
 												@endforeach
 												@foreach($kontak as $kontak_list)
