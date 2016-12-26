@@ -73,6 +73,29 @@
     </script>
 
 
+    <script>
+        function lightbox2(idx) {
+            //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
+            var ninjaSldr2 = document.getElementById("ninja-slider2");
+            ninjaSldr2.parentNode.style.display = "block";
+
+            nslider2.init(idx);
+
+            var fsBtn2 = document.getElementById("fsBtn2");
+            fsBtn2.click();
+        }
+
+        function fsIconClick2(isFullscreen) { //fsIconClick is the default event handler of the fullscreen button
+            if (isFullscreen) {
+                var ninjaSldr2 = document.getElementById("ninja-slider2");
+                ninjaSldr2.parentNode.style.display = "none";
+            }
+        }
+    </script>
+
+
+
+
 
     
 
